@@ -11,15 +11,23 @@ with open(csvpath, newline='') as csvfile:
         total_months=total_months+1
         total=total+int(row[1])
         revenue.append(int(row[1]))
-    print(revenue)
-    average_change=round(total/total_months,2)
     greatest_increase=max(revenue)
     greatest_decrease=min(revenue)
-    print(total_months)
-    print(total)
-    print(average_change)
-    print(greatest_increase)
-    print(greatest_decrease)
+    average_change=round(total/total_months,2)
+    print('Financial Analysis \n')
+    print('------------------------------')
+    print('Total Months: '+str(total_months))
+    print('Total: $'+str(total))
+    print('Average Change: $'+str(average_change))
+    for rows in csvreader:
+        if greatest_increase==rows[1]:
+            greatest_increase_month=rows[0]
+        if greatest_decrease==rows[1]:
+            greatest_decrease_month=rows[0]      
+    print('Greatest Increase in Profits: '+greatest_increase_month +' ($'+str(greatest_increase)+')')
+    print('Greatest Decrease in Profits: '+greatest_decrease_month +' ($'+str(greatest_decrease)+')')
+
+
 
 
     
