@@ -45,8 +45,6 @@ with open(csvpath, newline='') as csvfile:
     print(percentage)
     winner=max(percentage)
     print(winner)
-    store these values in dictionary and display
-
 
 
        
