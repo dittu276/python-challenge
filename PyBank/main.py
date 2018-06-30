@@ -1,6 +1,5 @@
 import os
 import csv
-import sys
 #path
 csvpath = os.path.join('..','..','Instructions','PyBank','Resources','budget_data.csv')
 #read csv file
@@ -41,7 +40,6 @@ with open(csvpath, newline='') as csvfile:
     change_sum=sum(change_list)
     average_change=round(change_sum/len(change_list),2)
 #print results to terminal
-    sys.stdout=open('PyBank.txt','w')
     print('\nFinancial Analysis \n')
     print('------------------------------')
     print('Total Months: '+str(total_months))
