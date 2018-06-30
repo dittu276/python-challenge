@@ -5,7 +5,7 @@ csvpath = os.path.join('..','..','Instructions','PyBank','Resources','budget_dat
 #read csv file
 with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-#read header
+#read header and skip
     csv_header = next(csvreader)
 #declare variables
     total_months=0
